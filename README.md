@@ -16,6 +16,14 @@ turns into this...
 <h1>Poop Important heading</h1>
 ```
 
+And this...
+
+```js
+$('div').hide();
+```
+
+plays a sound effect.
+
 ## Supported functions
 
 - `text( myText )`: Prepends `myText` with 'Poop'
