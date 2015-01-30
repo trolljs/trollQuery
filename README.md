@@ -18,8 +18,8 @@ turns into this...
 
 ## Supported functions
 
-- `text()`
-- `addClass()`
-- `removeClass()`
-- `prepend()`
-- `append()`
+- `text( myText )`: Prepends `myText` with 'Poop'
+- `addClass( myClass )`: Adds `myClass` and also a 'poop' class
+- `removeClass( myClass )`: Removes `myClass` and adds a 'poop' class
+- `prepend( myStuff )`: Prepends with `myStuff` + ` poop `
+- `append()`: Appends with `Poop  ` + `myStuff`
