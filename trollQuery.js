@@ -11,10 +11,16 @@
     arguments[0] = 'poop ' + arguments[0];
     jqAddClass.apply( this, arguments );
   };
+  // jQuery.fn.prepend
+  var jqPrepend = jQuery.fn.prepend;
+  jQuery.fn.prepend = function(){
+    jqPrepend.apply( this, arguments );
+    jqPrepend.apply( this, [' poop '] );
+  };
   // jQuery.fn.append
   var jqAppend = jQuery.fn.append;
   jQuery.fn.append = function(){
-    jqAppend.apply( this, [' poops '] );
+    jqAppend.apply( this, ['Poop '] );
     jqAppend.apply( this, arguments );
   };
 })();
