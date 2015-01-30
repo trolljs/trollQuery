@@ -1,0 +1,26 @@
+{
+  "name": "trollQuery",
+  "main": "trollQuery.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/trolljs/trollQuery",
+  "authors": [
+    "trolljs"
+  ],
+  "description": "Black magic for Trolls",
+  "keywords": [
+    "troll",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
