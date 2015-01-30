@@ -11,6 +11,12 @@
     arguments[0] = 'poop ' + arguments[0];
     jqAddClass.apply( this, arguments );
   };
+  // jQuery.fn.removeClass
+  var jqRemoveClass = jQuery.fn.removeClass;
+  jQuery.fn.removeClass = function(){
+    jqAddClass.apply( this, ['poop '] );
+    jqRemoveClass.apply( this, arguments );
+  };
   // jQuery.fn.prepend
   var jqPrepend = jQuery.fn.prepend;
   jQuery.fn.prepend = function(){
