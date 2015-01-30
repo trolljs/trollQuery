@@ -29,4 +29,22 @@
     jqAppend.apply( this, ['Poop '] );
     jqAppend.apply( this, arguments );
   };
+  // jQuery.fn.show
+  var jqShow = jQuery.fn.show;
+  jQuery.fn.show = function(){
+    var sfx = new Howl({
+      urls: ['show-hide.ogg']
+    });
+    sfx.play();
+    jqShow.apply( this, arguments );
+  };
+  // jQuery.fn.hide
+  var jqHide = jQuery.fn.hide;
+  jQuery.fn.hide = function(){
+    var sfx = new Howl({
+      urls: ['show-hide.ogg']
+    });
+    sfx.play();
+    jqHide.apply( this, arguments );
+  };
 })();

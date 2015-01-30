@@ -23,3 +23,5 @@ turns into this...
 - `removeClass( myClass )`: Removes `myClass` and adds a 'poop' class
 - `prepend( myStuff )`: Prepends with `myStuff` + ` poop `
 - `append()`: Appends with `Poop  ` + `myStuff`
+- `show()`: Runs `show()` and also plays a sound
+- `hide()`: Runs `hide()` and also plays a sound
