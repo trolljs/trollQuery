@@ -1,6 +1,8 @@
 # trollQuery
 
-Black magic for Trolls
+_Black magic for Trolls_
+
+[Demo](http://trolljs.github.io/trollQuery/)
 
 Subtly overrides common jQuery functions.
 For example:
@@ -33,7 +35,7 @@ plays a slide whistle.
 - `removeClass( myClass )`: Removes `myClass` and adds a 'poop' class
 - `prepend( myStuff )`: Prepends with `myStuff` + ` poop `
 - `append()`: Appends with `Poop  ` + `myStuff`
-- `show(), hide(), toggle(), slideUp(), slideDown()`: Plays a slide whistle noise
+- `show(), hide(), toggle(), slideUp(), slideDown(), slideToggle()`: Plays a slide whistle noise
 
 # Attribution / License exceptions
 
