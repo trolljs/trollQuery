@@ -5,16 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>trollQuery demo</title>
   <meta name="description" content="Black magic for Trolls">
+  <style>
+    body {
+      margin: 0;
+      padding: 2em;
+      font-size: 2em;
+    }
+    p {
+      max-width: 25em;
+      margin: 0 0 1em;
+    }
+    button {
+      padding: .5em;
+      border: none;
+      border-radius: .25em;
+      background: #000;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam sequi amet iste reiciendis aperiam. Maxime exercitationem qui est illo cum architecto iusto iste optio iure magnam in sequi minus numquam.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <button id="toggle">Show/Hide</button>
 
-  <script src="src/vendor/jquery/dist/jquery.js"></script>
-  <script src="src/vendor/howler.js/howler.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="trollQuery.js"></script>
   <script>
-    
+    $('#toggle').click(function() {
+      $('p').slideToggle();
+    });    
   </script>
 </body>
 </html>

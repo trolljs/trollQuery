@@ -1,6 +1,8 @@
 # trollQuery
 
-Overrides some common jQuery functions.
+Black magic for Trolls
+
+Subtly overrides common jQuery functions.
 For example:
 
 ```html
@@ -19,10 +21,10 @@ turns into this...
 And this...
 
 ```js
-$('div').hide();
+$('div').slideDown();
 ```
 
-plays a sound effect.
+plays a slide whistle.
 
 ## Supported functions
 
@@ -31,5 +33,8 @@ plays a sound effect.
 - `removeClass( myClass )`: Removes `myClass` and adds a 'poop' class
 - `prepend( myStuff )`: Prepends with `myStuff` + ` poop `
 - `append()`: Appends with `Poop  ` + `myStuff`
-- `show()`: Runs `show()` and also plays a sound
-- `hide()`: Runs `hide()` and also plays a sound
+- `show(), hide(), toggle(), slideUp(), slideDown()`: Plays a slide whistle noise
+
+# Attribution / License exceptions
+
+- show-hide.ogg is from [freesound.org](https://www.freesound.org/people/joedeshon/sounds/79677/) and is licensed under [Creative Commons](http://creativecommons.org/licenses/by/3.0/). It was converted from WAV to OGG using [online-convert.com](http://www.online-convert.com/result/c8a68b8c70cf35519c2d61d5b61d3cac).
