@@ -5,94 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>trollQuery demo</title>
   <meta name="description" content="Black magic for Trolls">
-  <style>
-    body {
-      margin: 0;
-      padding: 2em;
-      font-size: 1.75em;
-    }
-    h1 {
-      font-size: 2em;
-      margin: 0 0 .5em;
-    }
-    p {
-      max-width: 25em;
-      margin: 0 0 1em;
-    }
-    button {
-      padding: .5em;
-      border: none;
-      border-radius: .25em;
-      background: #000;
-      color: #fff;
-      font-size: .75em;
-      cursor: pointer;
-    }
-    button:focus {
-      outline: 1px dotted #000;
-      outline-offset: 2px;
-    }
-    hr {
-      border: 0;
-      height: 1px;
-      background: #000;
-      margin: 2em 0;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h1><code>text()</code></h1>
-  <p id="text_target">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-  <button id="text_trigger">Change the text</button>
+  <section class="demo" id="demo-text" data-script="#demo-text_script">
+    <header class="demo-header">
+      <h1 class="demo-header_title"><code>text():</code></h1>
+      <p class="demo-header_description">Prepends text with "Poop".</p>
+    </header>
+    <figure class="example padded-box padded-box__example">
+      <h2 class="padded-box_header">Example:</h2>
+      <div class="js-target padded-box_body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </figure>
+    <form class="actions">
+      <label>
+        Try me: update the example text
+        <input class="js-input" type="text" value="blah blah blah">
+      </label>
+      <button type="button" class="js-trigger">Change the text</button>
+    </form>
+  </section>
 
-  <hr>
-
-  <h1><code>slideToggle()</code></h1>
-  <p id="slidetoggle_target">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-  <button id="slidetoggle_trigger">Show/Hide</button>
+  <section class="demo" id="demo-slidetoggle" data-script="#demo-slidetoggle_script">
+    <header class="demo-header">
+      <h1 class="demo-header_title"><code>slideToggle():</code></h1>
+      <p class="demo-header_description">Plays a slide whistle noise.</p>
+    </header>
+    <figure class="example padded-box padded-box__example">
+      <h2 class="padded-box_header">Example:</h2>
+      <div class="js-target padded-box_body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </figure>
+    <form class="actions">
+      <label>
+        Try me:
+        <button type="button" class="js-trigger">Show/Hide</button>
+      </label>
+    </form>
+  </section>
 
   <a href="https://github.com/trolljs/trollQuery"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
 
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="trollQuery.js"></script>
-  <script>
-    // http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-    function shuffle(array) {
-      var currentIndex = array.length, temporaryValue, randomIndex;
-      // While there remain elements to shuffle...
-      while (0 !== currentIndex) {
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-      }
-      return array;
-    }
-    $('#text_trigger').click(function() {
-      var text = 'lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum'
-      $('#text_target').text(shuffle(text.split(' ')).join(' ') + '.');
-    });    
-    $('#slidetoggle_trigger').click(function() {
-      $('#slidetoggle_target').slideToggle();
-    });    
-  </script>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="trollQuery.js"></script>
+
+<script id="demo-text_script">
+$('#demo-text').on( 'click', '.js-trigger', function(e) {
+  var $parent = $(e.delegateTarget);
+  $parent.find('.js-target').text( $parent.find('.js-input').val() );
+});
+</script>
+
+<script id="demo-slidetoggle_script">
+$('#demo-slidetoggle').on( 'click', '.js-trigger', function(e) {
+  var $parent = $(e.delegateTarget);
+  $parent.find('.js-target').slideToggle();
+});
+</script>
+
+<script>
+// Grab and display the <script> contents for each demo
+$('[data-script]').each(function() {
+  var $this = $(this);
+  $this.find('.actions')[0].innerHTML =
+    $this.find('.actions')[0].innerHTML +
+    '<figure class="code padded-box"><h2 class="padded-box_header">Code:</h2>' +
+      '<pre class="padded-box_body"><code>' + $( $this.data('script') ).html().trim() + '</code></pre>' +
+    '</figure>';
+});
+</script>
+
 </body>
 </html>

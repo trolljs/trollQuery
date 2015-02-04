@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2em;
+  background: rgb(216,48,24);
+  color: #3A3232;
+  font-size: 1.75em;
+  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+}
+
+label {
+  display: block;
+  margin: 0 0 .25em;
+}
+
+input {
+  display: block;
+  width: 100%;
+  max-width: 33.33333333em;
+  padding: .5em;
+  border: 1px solid #F07848;
+  border-radius: .25em;
+  font-size: .75em;
+  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+}
+
+input:focus {
+  outline: 1px dotted #F07848;
+  outline-offset: 2px;
+}
+
+label input {
+  margin-top: .25em;
+}
+
+button {
+  display: inline-block;
+  max-width: 25em;
+  padding: .5em;
+  border: 1px solid #F07848;
+  border-radius: .25em;
+  background: #F07848;
+  color: #fff;
+  font-size: 1em;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 1px dotted #F07848;
+  outline-offset: 2px;
+}
+
+input + button,
+label + button {
+  width: 100%;
+  margin-top: .25em;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+.demo {
+  padding: 1em;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.demo + .demo {
+  margin-top: 1em;
+}
+
+.demo-header {
+  margin: 0 0 1em;
+}
+
+.demo-header_title {
+  display: inline-block;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.demo-header_description {
+  display: inline-block;
+  margin: 0;
+  font-size: .8em;
+  font-style: italic;
+}
+
+.padded-box {
+  margin: 0;
+  padding: .75em 1.25em 1.25em;
+  border: 1px solid rgba(192,216,216,1);
+  border-radius: .25em;
+  background: rgba(192,216,216,0.3);
+}
+
+.padded-box_body {
+  margin: 0;
+  padding: 0;
+}
+
+.padded-box_header {
+  display: inline-block;
+  margin: 0 0 1em;
+  padding: 0;
+  border-bottom: 1px solid #3A3232;
+  font-size: .65em;
+  line-height: 1;
+  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.actions {
+  margin-top: 1.5em;
+}
+
+@media screen and (min-width: 75em) {
+  .example,
+  .actions {
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    margin-right: -0.25em;
+    vertical-align: top;
+  }
+
+  .actions {
+    border-left: 2em solid transparent;
+  }
+}
+
+.code {
+  margin-top: 1em;
+}
+
+.code code {
+  font-size: .75em;
+}
